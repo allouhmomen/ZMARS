@@ -1,0 +1,8 @@
+extension implementation in class zbp_mars_ext_salesorder unique;
+
+extend behavior for SalesOrder
+{
+
+  action ( authorization : update, features : instance, lock : none ) ChangeCusCondGroups parameter ZMARS_P_SALEDOCCHANGECCG result [0..1] $self;
+
+}

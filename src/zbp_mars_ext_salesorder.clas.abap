@@ -1,0 +1,5 @@
+CLASS zbp_mars_ext_salesorder DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF r_salesordertp.
+ENDCLASS.
+
+CLASS zbp_mars_ext_salesorder IMPLEMENTATION.
+ENDCLASS.

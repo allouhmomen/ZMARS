@@ -1,0 +1,42 @@
+@Metadata.layer: #CUSTOMER
+
+annotate entity C_SalesOrderManage with
+
+{
+  @UI.facet: [ { id: 'CusCondGroupCol',
+                 label: 'Customer Condition Groups',
+                 type: #COLLECTION,
+                 parentId: 'GeneralInfo',
+                 importance: #HIGH,
+                 position: 15 },
+               { id: 'CusCondGroup',
+                 label: 'Customer Condition Groups',
+                 purpose: #STANDARD,
+                 type: #FIELDGROUP_REFERENCE,
+                 parentId: 'CusCondGroupCol',
+                 importance: #HIGH,
+                 position: 10,
+                 targetQualifier: 'CusCondGroup' } ]
+  @UI.fieldGroup: [ { position: 10, qualifier: 'CusCondGroup' },
+                    { qualifier: 'CusCondGroup',
+                      importance: #HIGH,
+                      type: #FOR_ACTION,
+                      dataAction: 'ChangeCusCondGroups',
+                      label: 'Change Condition Groups' } ]
+  @UI.lineItem: [ { position: 31 } ]
+  @UI.selectionField: [ { position: 31 } ]
+  @UI.textArrangement: #TEXT_FIRST
+  ZCusCondGroup1;
+
+  @UI.fieldGroup: [ { position: 20, qualifier: 'CusCondGroup' } ]
+  @UI.lineItem: [ { position: 32 } ]
+  @UI.selectionField: [ { position: 32 } ]
+  @UI.textArrangement: #TEXT_FIRST
+  ZCusCondGroup2;
+
+  @UI.fieldGroup: [ { position: 30, qualifier: 'CusCondGroup' } ]
+  @UI.lineItem: [ { position: 33 } ]
+  @UI.selectionField: [ { position: 33 } ]
+  @UI.textArrangement: #TEXT_FIRST
+  ZCusCondGroup3;
+}
